@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Attack Detector For Spam SMS Messages</h2>
+		
+	</div>
+	</header>
+
+	{% if prediction == 1%}
+	<h2 style="color:red;">Be carful, This SMS Message is attack</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;">This SMS Message not attack! (You are safe!)</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
